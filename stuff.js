@@ -3,7 +3,7 @@ const CONFIG = {
 };
 
 const CATALOG = [
-  { id: 1, type: "tv", title: "Jojo's Bizzare Adventure (TV)", year: 2012, genre: "Anime", file: "Shows/JoJos/JoJo - S01E01-fixed.mp4", poster: "" },
+  { id: 1, type: "tv", title: "Jojo's Bizzare Adventure (TV)", year: 2012, genre: "Anime", file: "Shows/JoJos/JoJo - S01E01-fixed.mp4", poster: "poser.png" },
 ];
 
 
