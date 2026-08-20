@@ -1,10 +1,9 @@
-
 const CONFIG = {
   R2_BASE_URL: "https://pub-2dde85ab527a45a2bd811334ebc482e4.r2.dev",
 };
 
 const CATALOG = [
-  { id: 1, type: "tv", title: "Jojo's Bizzare Adventure (TV)", year: 2012, genre: "Anime", file: "moviesandtv/Shows/JoJos/JoJo - S01E01.mp4", poster: "" },
+  { id: 1, type: "tv", title: "Jojo's Bizzare Adventure (TV)", year: 2012, genre: "Anime", file: "https://pub-2dde85ab527a45a2bd811334ebc482e4.r2.dev/Shows/JoJos/JoJo%20-%20S01E01.mp4", poster: "" },
   { id: 2, type: "movie", title: "Lego Batman", year: 2017, genre: "Lego",  file: "movies/low-tide.mp4",  poster: "" },
 ];
 
