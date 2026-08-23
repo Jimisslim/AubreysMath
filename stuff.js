@@ -33,7 +33,7 @@ function render(){
     return matchesType && matchesQuery;
   });
 
-  resultCount.textContent = `${filtered.length} title${filtered.length === 1 ? "" : "s"}`;
+
   grid.innerHTML = "";
 
   if (filtered.length === 0){
@@ -49,12 +49,10 @@ function render(){
       <div class="poster" style="${item.poster ? `background-image:url('${buildUrl(item.poster)}');background-size:cover;background-position:center;` : ""}">
         ${item.poster ? "" : item.title}
         <div class="play">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#e0a835" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="#e0a835"/></svg>
         </div>
       </div>
       <div class="meta">
         <div class="title">${item.title}</div>
-        <div class="sub">${item.year} · ${item.genre}</div>
       </div>
     `;
     card.addEventListener("click", () => openModal(item));
@@ -85,18 +83,11 @@ const closeBtn = document.getElementById("modal-close");
 
 function openModal(item){
   modalTitle.textContent = item.title;
-  modalBody.textContent = `${item.year} · ${item.genre}`;
 
   const url = buildUrl(item.file);
   if (url){
     playerWrap.innerHTML = `<video src="${url}" controls autoplay></video>`;
   } else {
-    playerWrap.innerHTML = `
-      <div class="placeholder">
-        No Cloudflare bucket connected yet. Once <code>R2_BASE_URL</code> is set
-        in the config and <code>${item.file}</code> exists in the bucket, this
-        will stream automatically.
-      </div>`;
   }
   backdrop.classList.add("open");
 }
