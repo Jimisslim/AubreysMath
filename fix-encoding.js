@@ -105,8 +105,7 @@ const shows = buildShows(path.join(ROOT, "Shows"));
 const movies = buildMovies(path.join(ROOT, "Movies"));
 
 const manifest = { shows, movies };
-// fs.writeFileSync with "utf8" never adds a byte-order-mark, unlike PowerShell's
-// ">" redirection sometimes does - this keeps the JSON valid for fetch()/JSON.parse().
+
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(manifest, null, 2) + "\n", "utf8");
 
 console.log(`Found ${shows.length} show(s) and ${movies.length} movie(s).`);
