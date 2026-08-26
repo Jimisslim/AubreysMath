@@ -27,7 +27,9 @@ async function loadManifest(){
   try {
     const res = await fetch(CONFIG.MANIFEST_URL, { cache: "no-store" });
     if (!res.ok) throw new Error(`manifest.json returned ${res.status}`);
-    const data = await res.json();
+    let text = await res.text();
+    if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+    const data = JSON.parse(text);
     CATALOG = [...(data.shows || []), ...(data.movies || [])];
   } catch (err) {
     console.error("Could not load manifest.json:", err);
@@ -90,9 +92,6 @@ const browseWrap = document.getElementById("browse-wrap");
 const seasonTabsEl = document.getElementById("season-tabs");
 const episodeListEl = document.getElementById("episode-list");
 
-// Plays a video file, attaching a subtitle track if one exists for it.
-// Subtitles must be a separate .vtt file (browsers can't expose subtitle
-// tracks that are muxed inside the .mkv itself) - see extract-subs.sh.
 function playFile(fileKey, subtitleKey){
   const url = buildUrl(fileKey);
   const subUrl = subtitleKey ? buildUrl(subtitleKey) : null;
@@ -117,7 +116,7 @@ function renderEpisodeList(season){
       playFile(ep.file, ep.subtitle);
     });
     episodeListEl.appendChild(row);
-    if (idx === 0) row.click(); // auto-play the first episode of the season
+    if (idx === 0) row.click();
   });
 }
 
