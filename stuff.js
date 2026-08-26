@@ -3,7 +3,7 @@ const CONFIG = {
   MANIFEST_URL: "manifest.json",
 };
 
-let CATALOG = []; // flattened shows + movies, loaded from manifest.json
+let CATALOG = [];
 let activeFilter = "all";
 let query = "";
 
@@ -27,6 +27,7 @@ async function loadManifest(){
   try {
     const res = await fetch(CONFIG.MANIFEST_URL, { cache: "no-store" });
     if (!res.ok) throw new Error(`manifest.json returned ${res.status}`);
+
     let text = await res.text();
     if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
     const data = JSON.parse(text);
@@ -96,7 +97,7 @@ function playFile(fileKey, subtitleKey){
   const url = buildUrl(fileKey);
   const subUrl = subtitleKey ? buildUrl(subtitleKey) : null;
   playerWrap.innerHTML = `
-    <video controls autoplay>
+    <video controls autoplay crossorigin="anonymous">
       <source src="${url}">
       ${subUrl ? `<track kind="subtitles" src="${subUrl}" srclang="en" label="English" default>` : ""}
       Your browser can't play this file directly - it may need to be an .mp4 instead of .mkv.
