@@ -211,16 +211,21 @@ nav.tabs button:not(.active):hover{ color: var(--text); }
 .modal-backdrop.open{ display:flex; }
 .modal{
   width: min(920px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
   background: var(--bg-raised);
   border: 1px solid var(--line);
-  overflow: hidden;
 }
 .modal-head{
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding: 16px 20px;
   border-bottom: 1px solid var(--line);
+  background: var(--bg-raised);
 }
 .modal-head button{
   background: transparent;
@@ -232,6 +237,57 @@ nav.tabs button:not(.active):hover{ color: var(--text); }
   line-height: 1;
 }
 .modal-head button:hover{ color: var(--text); border-color: var(--amber-dim); }
+
+.browse{
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.season-tabs{
+  display:flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.season-tabs button{
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--text-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.season-tabs button.active{
+  background: var(--amber);
+  color: #1a1508;
+  font-weight: 600;
+  border-color: var(--amber);
+}
+.season-tabs button:not(.active):hover{ color: var(--text); }
+.episode-list{
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.episode-item{
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+.episode-item:hover{
+  border-color: var(--line);
+  color: var(--text);
+}
+.episode-item.active{
+  background: var(--amber);
+  color: #1a1508;
+  font-weight: 600;
+}
+
 .player{
   aspect-ratio: 16/9;
   background: #000;
