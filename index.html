@@ -1,48 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AubreysMath.org</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aubrey's Health</title>
+    <link rel="icon" href="Images/Icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style/style.css">
+    <script src="JavaScript/main.js" defer></script>
 </head>
 <body>
 
-<header>
-  <div>Aubreysmath.org</div>
-  <nav class="tabs" id="tabs">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="movie">Movies</button>
-    <button data-filter="tv">TV Shows</button>
-  </nav>
-  <div class="search-wrap">
-    <input id="search" type="text" placeholder="Search movies">
-  </div>
-</header>
-
-<!--Fixed casing but it wont let me commit from just changing the name W git-->
-<section class="section">
-  <div class="section-head">
-  </div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty-state" style="display:none;">Yo we do NOT have that</div>
-</section>
-
-<div class="modal-backdrop" id="modal-backdrop">
-  <div class="modal">
-    <div class="modal-head">
-      <h3 id="modal-title">Movie</h3>
-      <button id="modal-close" aria-label="Close">✕</button>
+    <div class="announcement-box">
+        <span class="announcement-label">Announcement</span>
+        <b>DEAR SCHS STUDENTS!</b>
+        <br>
+        <p>Several games are being blocked by your automatic blocker thingy!</p>
+        <p>Do not fret, Aubreyshealth.com will be fixed soon!</p>
     </div>
-    <div class="browse" id="browse-wrap" style="display:none;">
-      <div class="season-tabs" id="season-tabs"></div>
-      <div class="episode-list" id="episode-list"></div>
+
+    <div class="page">
+        <div class="hero">
+            <div class="logo-wrapper">
+                <img src="Images/LOGO.png" alt="Aubrey's Games">
+                <span class="yandere-badge">Now with Yandere Simulator!</span>
+            </div>
+        </div>
+        
+        <hr style="width: 80%; border-color: rgba(255,133,179,0.2);">
+
+        <div class="games-grid">
+            <div class="game-card" data-game="FNAF 1" onclick="window.open('FNAF1Web/FiveNightsAtFreddys/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/FNAF.png" class="game-icon" alt="FNAF 1 Icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>FNAF 1</h3>
+                    <p>Why am I starting night 3 with 3 stars!? Its decompiled directly from my copy of the game.</p>
+                    <p>You are effectively playing on my save.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="FNAF 2" onclick="window.open('FNAF2Web/FiveNightsAtFreddys2/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/FNAF2.png" class="game-icon" alt="FNAF 2 Icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>FNAF 2</h3>
+                    <p>ITS OFF CENTER WE HATE YOU WE HATE YOU. Also playing on my save again.</p>
+                    <p>I'm sorry you can press new game</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="FNAF 3" onclick="window.open('FNAF3Web/FiveNightsAtFreddys3/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/FNaF3.png" class="game-icon" alt="FNAF 3 Icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>FNAF 3</h3>
+                    <p>It takes a second to load. Im sorry.</p>
+                    <p>Actually, this doesn't work at all. Oh well, who really plays FNAF 3?</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="FNAF 4" onclick="window.open('FNAF4Web/FiveNightsAtFreddys4/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/fnaf4.png" class="game-icon" alt="FNAF 4 Icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>FNAF 4</h3>
+                    <p>Another one on my save.</p>
+                    <p>Holy smokes you think I'd be smart enough to at least clear my save first.</p>
+                    <p>WAIT I TESTED IT IT CLEARED MY SAVE PARTYY</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="FNAF 5" onclick="window.open('FNAF5Web/FiveNightsAtFreddys5/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/FNAF5.png" class="game-icon" alt="FNAF 5 Icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>FNAF 5</h3>
+                    <p>First fnaf game with a budget shi is taking forevs to decompile</p>
+                    <p>Now its taking forever to recompile</p>
+                    <p>!! TO SELECT THINGS USE SHIFT !!</p>
+                </div>
+            </div>
+            
+            <div class="game-card" data-game="Kindergarten" onclick="window.open('Kindergarden/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/Kindergarden.png" alt="Kindergarden" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>kindergarten</h3>
+                    <b>DOES NOT WORK ON CURRENT VERSION</b>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Kindergarten 2" onclick="window.open('Kindergarten2/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/kindergarten2.png" alt="Kindergarden" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>kindergarten 2</h3>
+                    <p>Thank you gn-math for your web port. I really gotta figure out porting.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Baldi's Basics" onclick="window.open('BaldisTest/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/Baldis.png" alt="Kindergarden" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Baldis Basics</h3>
+                    <p>My first web port!? Also it IS tiny so zoom in.</p>
+                    <p>In my defense, this is my first port</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Pizza Tower" onclick="window.open('https://effulgent-puppy-ea40bc.netlify.app/', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PT.png" alt="Pizza Tower" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Pizza Tower</h3>
+                    <p>Port by Burntpopcorn! They are the reigning champion of porting game maker games!</p>
+                    <p>Its all there, if you can wait for it to load.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Undertale" onclick="window.open('https://phenomenal-nougat-7ccb82.netlify.app', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src ="Images/Undertale.png" alt="Undertale" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Undertale</h3>
+                    <p>Port by Burntpopcorn once more, I had to jump through a few hoops but we got there.</p>
+                    <p>This is for a request!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Cuphead" onclick="window.open('https://playful-axolotl-cf04fc.netlify.app', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/Cuphead.png" alt="Cuphead" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Cuphead</h3>
+                    <p>Port by GN-math! This game takes a LONG time to load, but once you load it once it loads quickly after that.</p>
+                    <p>This DOES save but it saves only to YOUR computer!</p>
+                    <p>!! PLAY WITH A CONTROLLER !!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Build Now GG" onclick="location.href='Runners/play-buildnow.html'">
+                <div class="game-icon-wrap">
+                    <img src="Images/buildnowgg.png" alt="Build Now GG" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Build Now GG</h3>
+                    <p>Is this a lazy way to do this? Yes. But hey its fortnite so its chill</p>
+                </div>
+            </div>
+            
+            <div class="game-card" data-game="Buckshot Roulette" onclick="window.open('BuckShot/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/BR.png" alt="Buckshot Roulette" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Buckshot Roulette</h3>
+                    <p>Maybe gn-math MIGHT be better than my website! Go check them out!</p>
+                    <p>Not like you guys like my website anyway HMPH</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="EagleCraft" onclick="location.href='EagleCraft/index.html'">
+                <div class="game-icon-wrap">
+                    <img src="Images/EagleCraft.png" alt="EagleCraft" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>EagleCraft (minecraft 1.8.8 VANILLA)</h3>
+                    <p>Yooo W EagleCraft for making their code open source! Saved me alot of time.</p>
+                    <p>Keep in mind, this is OLD its SO OLD.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Rythm Plus" onclick="location.href='Runners/PlayRythm.html'">
+                <div class="game-icon-wrap">
+                    <img src="Images/rythm.png" alt="Rythm Plus" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Rythm Plus</h3>
+                    <p>I love what the creators are doing here. W game</p>
+                </div>
+            </div>
+            
+            <div class="game-card" data-game="People Playground" onclick="window.open('PP/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PP.png" alt="Rythm Plus" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>People Playground</h3>
+                    <p>This game SAVED me during online school. Port by GN math. </p>
+                    <p>!! E to spawn F to use !!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="That's Not My Neighbor" onclick="window.open('TNMN/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/TNMN.png" alt="Rythm Plus" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Thats Not My Neighbor</h3>
+                    <p>Port by GN math! Finally I can be like markiplier</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Duck Life" onclick="window.open('DuckLife2/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/ducklife.png" alt="Duck Life" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Duck Life</h3>
+                    <p>Found this game on the big github. W BonziWorld1</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Ultrakill" onclick="window.open('ultrakill/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/ULogo.png" alt="Ultrakill" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Ultrakill</h3>
+                    <p>After so so many requests, I have finally added another stolen web port.</p>
+                    <p>Port by GN math, thanks to their web-port repo. I wouldent of been able to do this without them.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Plants vs. Zombies" onclick="window.open('PVZ/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PVZ.png" alt="PVZ" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Plants vs. Zombies</h3>
+                    <p>Only requested once or twice, still an easy add thank you genizy the GOAT.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Iron Lung" onclick="window.open('IronLung/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/IronLung.png" alt="IronLung" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Iron lung</h3>
+                    <p>ANOTHER port by genizy! Bro please teach me how this is cray cray.</p>
+                    <P>Whats up with the pic? I just wanted to draw smth idk</P>
+                    <p>To exit the terminal press esc twice!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Hollow Knight" onclick="window.open('https://willowy-fox-2c1aa7.netlify.app/', '_blank')">
+                <div class="game-icon-wrap"> 
+                    <img src="Images/HK.png" alt="Hollow Knight" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Hollow Knight</h3>
+                    <p>Port by bog</p>
+                    <b>!! YOU WILL SEE A BLACK SCREEN KEEP CLICKING SKIP !!</b>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Hollow Knight: Silksong" onclick="window.open('https://funny-valkyrie-d21c5e.netlify.app/', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/SS.png" alt="Balatro" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Hollow Knight: Silksong</h3>
+                    <p>Takes a while to load assets, once your in the game it takes some time to laod too</p>
+                    <p>Credits to genizy! ...per usual</p>
+                </div>
+            </div>
+            
+            <div class="game-card" data-game="Slime Rancher" onclick="window.open('SlimeRancher/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/SR.png" alt="Slime Rancher" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Slime Rancher</h3>
+                    <p>Port by snubby.top! This game is a lot of fun.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Balatro" onclick="window.open('https://venerable-basbousa-db8362.netlify.app/', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/balatro.png" alt="Balatro" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Balatro</h3>
+                    <p>Its going to say there is an error, just click ok. Its NOT an error</p>
+                    <p>Credits to W0W53R!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Yandere Simulator" onclick="window.open('YanSimWeb/index.html', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/YSLogo.png" alt="Yandere Simulator" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Yandere Simulator</h3>
+                    <p>The first menu screen is extremly sus so I suggest you SPAM E.</p>
+                    <p>Avaliable NOW!</p>
+                    <p>Credits to Snubby!</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Omori" onclick="window.open('http://earnest-otter-960ad8.netlify.app/', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/Omroi.png" alt="Omori" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Omori</h3>
+                    <p>Avaliable NOW!</p>
+                    <p>Credits to gn-math!</p>
+                </div>
+            </div>
+
+            <!-- ===== Papa Louie games (Flash via Ruffle) ===== -->
+            <div class="game-card" data-game="Papa Louie: When Pizzas Attack!" onclick="window.open('PapaLouie/play.html?game=papalouie1', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papalouie1.jpg" alt="Papa Louie: When Pizzas Attack!" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa Louie: When Pizzas Attack!</h3>
+                    <p>Papa kills pizza</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa Louie 2: When Burgers Attack!" onclick="window.open('PapaLouie/play.html?game=papalouie2', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papalouie2.jpg" alt="Papa Louie 2: When Burgers Attack!" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa Louie 2: When Burgers Attack!</h3>
+                    <p>Bad burger.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa Louie 3: When Sundaes Attack!" onclick="window.open('PapaLouie/play.html?game=papalouie3', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papalouie3.jpg" alt="Papa Louie 3: When Sundaes Attack!" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa Louie 3: When Sundaes Attack!</h3>
+                    <p>Sundaes are better than sundays BOIII Takes a sec to load.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Pizzeria" onclick="window.open('PapaLouie/play.html?game=papaspizzeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papaspizzeria.jpg" alt="Papa's Pizzeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Pizzeria</h3>
+                    <p>Your gonna love our pizza</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Burgeria" onclick="window.open('PapaLouie/play.html?game=papasburgeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papasburgeria.jpg" alt="Papa's Burgeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Burgeria</h3>
+                    <p>Burgers.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Taco Mia!" onclick="window.open('PapaLouie/play.html?game=papastacomia', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papastacomia.jpg" alt="Papa's Taco Mia!" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Taco Mia!</h3>
+                    <p>Taco</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Freezeria" onclick="window.open('PapaLouie/play.html?game=papasfreezeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papasfreezeria.jpg" alt="Papa's Freezeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Freezeria</h3>
+                    <p>yum</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Pancakeria" onclick="window.open('PapaLouie/play.html?game=papaspancakeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papaspancakeria.jpg" alt="Papa's Pancakeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Pancakeria</h3>
+                    <p>french toast</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Wingeria" onclick="window.open('PapaLouie/play.html?game=papaswingeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papaswingeria.jpg" alt="Papa's Wingeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Wingeria</h3>
+                    <p>I WOULD LOVE SOME WINGSTOP RN AUBREY</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Hot Doggeria" onclick="window.open('PapaLouie/play.html?game=papashotdoggeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papashotdoggeria.jpg" alt="Papa's Hot Doggeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Hot Doggeria</h3>
+                    <p>Dog.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Cupcakeria" onclick="window.open('PapaLouie/play.html?game=papascupcakeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papascupcakeria.jpg" alt="Papa's Cupcakeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Cupcakeria</h3>
+                    <p>Cupcake</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Pastaria" onclick="window.open('PapaLouie/play.html?game=papaspastaria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papaspastaria.jpg" alt="Papa's Pastaria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Pastaria</h3>
+                    <p>Mac & Cheese</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Donuteria" onclick="window.open('PapaLouie/play.html?game=papasdonuteria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papasdonuteria.jpg" alt="Papa's Donuteria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Donuteria</h3>
+                    <p>Donuts</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Cheeseria" onclick="window.open('PapaLouie/play.html?game=papascheeseria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papascheeseria.jpg" alt="Papa's Cheeseria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Cheeseria</h3>
+                    <p>fries. Big file so give it a sec.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Bakeria" onclick="window.open('PapaLouie/play.html?game=papasbakeria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papasbakeria.jpg" alt="Papa's Bakeria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Bakeria</h3>
+                    <p>Chocolate pie.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Sushiria" onclick="window.open('PapaLouie/play.html?game=papassushiria', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papassushiria.jpg" alt="Papa's Sushiria" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Sushiria</h3>
+                    <p>California rolls.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Papa's Scooperia" onclick="window.open('PapaLouie/play.html?game=papasscooperia', '_blank')">
+                <div class="game-icon-wrap">
+                    <img src="Images/PapaLouie/papasscooperia.jpg" alt="Papa's Scooperia" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Papa's Scooperia</h3>
+                    <p>Cream. BIGGEST one so it takes a while to load.</p>
+                    <p>Runs on Ruffle! Click CONTINUE after it loads.</p>
+                </div>
+            </div>
+
+            <div class="game-card" data-game="Needy Streamer Overload" data-locked="true" onclick="openLocked(this, 'NSO/index.html')">
+                <div class="game-icon-wrap">
+                    <img src="Images/NSO.png" alt="Needy Streamer Overload" class="game-icon">
+                </div>
+                <div class="game-card-text">
+                    <h3>Needy Streamer Overload</h3>
+                    <p>This game is here because it was on Aubreys wishlist.</p>
+                    <p>Credits to edurocks!</p>
+                </div>
+                <div class="lock-overlay">
+                    <img src="Images/lock.png" alt="Locked">
+                    <span>Password Required</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="player" id="player-wrap"></div>
-    <div class="modal-body" id="modal-body"></div>
-  </div>
-</div>
-<script src="stuff.js"></script>
+
+    <div class="pw-modal-backdrop" id="pwBackdrop" onclick="closePwModal(event)">
+        <div class="pw-modal">
+            <img src="Images/lock.png" alt="Lock" class="lock-icon-modal">
+            <h2>Age Restricted</h2>
+            <p>Enter the password to continue.</p>
+            <input
+                class="pw-input"
+                id="pwInput"
+                type="password"
+                placeholder="password"
+                onkeydown="if(event.key==='Enter') confirmPassword()"
+            >
+            <div class="pw-error" id="pwError"></div>
+            <div class="pw-buttons">
+                <button class="pw-btn pw-btn-cancel" onclick="closePwModal()">Cancel</button>
+                <button class="pw-btn pw-btn-confirm" onclick="confirmPassword()">Unlock</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats-panel">
+        <div class="sp-header">
+            <span class="sp-title">Site Stats</span>
+            <button class="sp-close-btn" onclick="closeStatsPanel()" title="Close">✕</button>
+        </div>
+        <div id="sp-loading" class="sp-loading">Loading stats</div>
+        <div id="sp-content" style="display:none">
+            <div class="sp-stat-row">
+                <span class="sp-stat-label"><span class="sp-active-dot"></span> Active users</span>
+                <span class="sp-stat-val" id="sp-active">—</span>
+            </div>
+            <div class="sp-stat-row">
+                <span class="sp-stat-label">Total site visits</span>
+                <span class="sp-stat-val" id="sp-visits">—</span>
+            </div>
+            <div class="sp-stat-row">
+                <span class="sp-stat-label">Total time on site</span>
+                <span class="sp-stat-val" id="sp-time">—</span>
+            </div>
+            <div class="sp-stat-row">
+                <span class="sp-stat-label">Total game launches</span>
+                <span class="sp-stat-val" id="sp-total-plays">—</span>
+            </div>
+            <div class="sp-section-label">Plays per game</div>
+            <div id="sp-games-list"></div>
+        </div>
+        <div class="sp-hint">CTRL + SHIFT + ` to toggle</div>
+    </div>
 </body>
 </html>
