@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "OptiFog",
+    "desc": "Reduces fog density maybe? Not sure if it works.",
+    "category": "performance",
+    "tag": "webgl",
+    "earlyFile": "EagleCraft/mods/optifog/early.js",
+    "codeFile": null
+  },
+  {
+    "id": 3,
+    "name": "ZoomMod",
+    "desc": "Hold C to smoothly zoom in 4x. Release to zoom back out.",
+    "category": "utility",
+    "tag": "hook",
+    "earlyFile": null,
+    "codeFile": "EagleCraft/mods/zoom/code.js"
+  },
+  {
+  "id": 4,
+  "name": "ClickGUI",
+  "desc": "In-game mod manager. Press RShift to open.",
+  "category": "utility",
+  "tag": "overlay",
+  "earlyFile": null,
+  "codeFile": "EagleCraft/mods/clickgui/code.js"
+},
+{
+  "id": 99,
+  "name": "DebugOverlay",
+  "desc": "Visual debugger",
+  "category": "utility",
+  "tag": "overlay",
+  "earlyFile": null,
+  "codeFile": "EagleCraft/mods/debug/code.js"
+}
+]
